@@ -44,3 +44,10 @@ C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drone
 C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drones-root.pdb
 C:\Users\Gustavo\source\repos\DronesProject\DronesProject\obj\Debug\net8.0\DronesWebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Gustavo\source\repos\DronesProject\DronesProject\obj\Debug\net8.0\DronesWebApi.csproj.CopyComplete
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\obj\Debug\net8.0\DronesWebApi.sourcelink.json
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drones-core.dll
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drones-data.pdb
+C:\Users\Gustavo\source\repos\DronesProject\DronesProject\bin\Debug\net8.0\drones-core.pdb

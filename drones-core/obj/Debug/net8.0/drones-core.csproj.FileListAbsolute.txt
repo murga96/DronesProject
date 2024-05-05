@@ -9,3 +9,4 @@ C:\Users\Gustavo\source\repos\DronesProject\drones-core\obj\Debug\net8.0\drones-
 C:\Users\Gustavo\source\repos\DronesProject\drones-core\obj\Debug\net8.0\refint\drones-core.dll
 C:\Users\Gustavo\source\repos\DronesProject\drones-core\obj\Debug\net8.0\drones-core.pdb
 C:\Users\Gustavo\source\repos\DronesProject\drones-core\obj\Debug\net8.0\ref\drones-core.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-core\obj\Debug\net8.0\drones-core.sourcelink.json

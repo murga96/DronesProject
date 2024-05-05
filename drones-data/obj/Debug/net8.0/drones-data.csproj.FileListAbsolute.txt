@@ -15,3 +15,4 @@ C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\refint\
 C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.pdb
 C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.genruntimeconfig.cache
 C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\ref\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.sourcelink.json

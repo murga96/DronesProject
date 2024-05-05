@@ -15,3 +15,4 @@ C:\Users\Gustavo\source\repos\DronesProject\drones-business\obj\Debug\net8.0\dro
 C:\Users\Gustavo\source\repos\DronesProject\drones-business\obj\Debug\net8.0\refint\drones-business.dll
 C:\Users\Gustavo\source\repos\DronesProject\drones-business\obj\Debug\net8.0\drones-business.pdb
 C:\Users\Gustavo\source\repos\DronesProject\drones-business\obj\Debug\net8.0\ref\drones-business.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-business\obj\Debug\net8.0\drones-business.sourcelink.json

@@ -10,3 +10,9 @@ C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\drones-
 C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\refint\drones-root.dll
 C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\drones-root.pdb
 C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\ref\drones-root.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\drones-root.sourcelink.json
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\bin\Debug\net8.0\drones-core.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\bin\Debug\net8.0\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\bin\Debug\net8.0\drones-data.pdb
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\bin\Debug\net8.0\drones-core.pdb
+C:\Users\Gustavo\source\repos\DronesProject\drones-root\obj\Debug\net8.0\drones-root.csproj.CopyComplete

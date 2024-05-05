@@ -18,6 +18,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <ProjectReference Include="..\drones-data\drones-data.csproj" />
 	  <ProjectReference Include="..\drones-root\drones-root.csproj" />
 	</ItemGroup>
 
