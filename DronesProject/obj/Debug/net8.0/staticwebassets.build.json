@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qTi8dW4g70MStUr6Do46ULFKkP9uszbgwknWNB4hB7A=",
+  "Source": "DronesWebApi",
+  "BasePath": "_content/DronesWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

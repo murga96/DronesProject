@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5DohHqehD1LT7LdGI42feyUJ80vLnXO18UhxPWENdliNBkeivchPaOwPreXfiyKbc153WadQrlscyXdCeV0aqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gustavo\\source\\repos\\DronesProject\\drones-root\\drones-root.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\Gustavo\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-data.deps.json
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-data.runtimeconfig.json
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-data.pdb
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-core.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\bin\Debug\net8.0\drones-core.pdb
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.csproj.AssemblyReference.cache
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.AssemblyInfoInputs.cache
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.AssemblyInfo.cs
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.csproj.CopyComplete
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\refint\drones-data.dll
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.pdb
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\drones-data.genruntimeconfig.cache
+C:\Users\Gustavo\source\repos\DronesProject\drones-data\obj\Debug\net8.0\ref\drones-data.dll
