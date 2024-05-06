@@ -11,10 +11,10 @@ namespace drones_business.Services
     public interface IDroneService
     {
         Task<Drone?> CreateDrone(Drone drone);
-        bool AddMedicines(Drone drone, ICollection<Medicine> medicines);
+        bool AddMedicines(string guid, ICollection<Medicine> medicines);
         ICollection<DroneDto> GetAvailableDrones();
         DroneDto? GetDroneByGuid(string guid);
         Task<ICollection<DroneDto>> GetDrones();
-        decimal GetTotalMedicinesWeight(Drone drone);
+        decimal GetTotalMedicinesWeight(DroneDto drone);
     }
 }

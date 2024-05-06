@@ -18,7 +18,7 @@ namespace drones_core.Models
         public string Name { get; set; } = null!;
         [Column(TypeName = "decimal(5,2)")]
         public decimal Weight { get; set; }
-        [RegularExpression(@"^[A-Z0-9_]+$", ErrorMessage = "Name must contain only capital letters, numbers and underscore.")]
+        [RegularExpression(@"^[A-Z0-9_]+$", ErrorMessage = "Code must contain only capital letters, numbers and underscore.")]
         public string Code { get; set; } = null!;
         public string Image { get; set; } = null!;
         public int? DroneId { get; set; } 

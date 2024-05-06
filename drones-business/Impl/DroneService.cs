@@ -18,8 +18,10 @@ namespace drones_business.Impl
             _repository = repository;
         }
 
-        bool IDroneService.AddMedicines(Drone drone, ICollection<Medicine> medicines)
+        bool IDroneService.AddMedicines(string guid , ICollection<Medicine> medicines)
         {
+            var drone = _repository.GetDroneByGuid(guid);
+            if(drone is null) return false;
             return _repository.AddMedicines(drone, medicines);
         }
 
@@ -93,7 +95,7 @@ namespace drones_business.Impl
             }).ToList();
         }
 
-        decimal IDroneService.GetTotalMedicinesWeight(Drone drone)
+        decimal IDroneService.GetTotalMedicinesWeight(DroneDto drone)
         {
             return _repository.GetTotalMedicinesWeight(drone);
         }

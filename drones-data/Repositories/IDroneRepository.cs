@@ -1,4 +1,5 @@
-﻿using drones_core.Models;
+﻿using drones_core.Dtos;
+using drones_core.Models;
 
 namespace drones_data.Repositories
 {
@@ -10,6 +11,6 @@ namespace drones_data.Repositories
         Drone? GetDroneByGuid(string guid);
         Drone? GetDroneById(int id);
         Task<ICollection<Drone>> GetDrones();
-        decimal GetTotalMedicinesWeight(Drone drone);
+        decimal GetTotalMedicinesWeight(DroneDto drone);
     }
 }

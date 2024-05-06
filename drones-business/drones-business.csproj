@@ -11,9 +11,4 @@
     <ProjectReference Include="..\drones-data\drones-data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Impl\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

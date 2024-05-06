@@ -1,7 +1,10 @@
 using drones_data;
 using drones_root;
 using DronesWebApi.ApiServices;
+using DronesWebApi.ApiServices.Validators;
+using DronesWebApi.Dtos;
 using DronesWebApi.Endpoints;
+using FluentValidation;
 
 namespace DronesProject
 {
@@ -17,10 +20,14 @@ namespace DronesProject
             ApiServicesManager.RegisterServices(builder.Services);
 
             // Add services to the container.
+            builder.Services.AddScoped<IValidator<DroneApiDto>, DroneDtoValidator>();
+            builder.Services.AddScoped<IValidator<MedicineApiDto>, MedicineApiDtoValidator>();
+            builder.Services.AddScoped<IValidator<ChargeDroneWithMedicinesDto>, ChargeDroneWithMedicinesDtoValidator>();
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("doc", new() { Title = $"{builder.Environment.ApplicationName}", Version = "v1" });//xPOS Admin API
+                options.SwaggerDoc("doc", new() { Title = $"{builder.Environment.ApplicationName}", Version = "v1" });
             });
 
             builder.Services.AddCors(options =>

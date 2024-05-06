@@ -53,7 +53,7 @@ namespace drones_data.Impl
             return await _context.Drones.Include(x => x.Medicines).ToListAsync();
         }
 
-        decimal IDroneRepository.GetTotalMedicinesWeight(Drone drone)
+        decimal IDroneRepository.GetTotalMedicinesWeight(DroneDto drone)
         {
             if (drone is null) return (decimal)-1.0;
             return drone.Medicines.Sum(d => d.Weight);
