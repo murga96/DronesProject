@@ -24,6 +24,7 @@ namespace drones_data
             modelBuilder.Entity<Drone>(drone =>
             {
                 drone.HasKey(x => x.Id);
+                drone.HasIndex(x => x.SerialNumber).IsUnique();
                 drone.HasMany(x => x.Medicines)
                 .WithOne(m => m.Drone)
                 .HasForeignKey(x => x.DroneId)
@@ -32,6 +33,7 @@ namespace drones_data
             modelBuilder.Entity<Medicine>(medicine =>
             {
                 medicine.HasKey(x => x.Id);
+                medicine.HasIndex(x => x.Code).IsUnique();
             });
         }
 
