@@ -17,6 +17,6 @@ namespace drones_core.Dtos
         public decimal WeightLimit { get; set; }
         public int BatteryCapacity { get; set; }
         public DroneStatus Status { get; set; }
-        public ICollection<Medicine> Medicines { get; set; } = new List<Medicine>();
+        public ICollection<MedicineDto> Medicines { get; set; } = new List<MedicineDto>();
     }
 }

@@ -1,10 +1,4 @@
-﻿using drones_core.Dtos;
-using drones_core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using drones_core.Models;
 
 namespace drones_data.Repositories
 {
@@ -13,9 +7,9 @@ namespace drones_data.Repositories
         Task<Drone?> CreateDrone(Drone drone);
         bool AddMedicines(Drone drone, ICollection<Medicine> medicines);
         ICollection<Drone> GetAvailableDrones();
-        DroneDto? GetDroneByGuid(string guid);
-        DroneDto? GetDroneById(int id);
-        Task<ICollection<DroneDto>> GetDrones();
+        Drone? GetDroneByGuid(string guid);
+        Drone? GetDroneById(int id);
+        Task<ICollection<Drone>> GetDrones();
         decimal GetTotalMedicinesWeight(Drone drone);
     }
 }

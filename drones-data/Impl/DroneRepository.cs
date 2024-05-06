@@ -38,49 +38,19 @@ namespace drones_data.Impl
             return _context.Drones.Where(x => x.BatteryCapacity > 25 && (x.Status == DroneStatus.INACTIVE)).Include(x => x.Medicines).ToList();
         }
 
-        DroneDto? IDroneRepository.GetDroneByGuid(string guid)
+        Drone? IDroneRepository.GetDroneByGuid(string guid)
         {
-            Drone? d = _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Guid == guid);
-            return d is null ? null : new DroneDto()
-            {
-                Guid = d.Guid,
-                Model = d.Model,
-                SerialNumber = d.SerialNumber,
-                WeightLimit = d.WeightLimit,
-                BatteryCapacity = d.BatteryCapacity,
-                Status = d.Status,
-                Medicines = d.Medicines,
-            };
+            return _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Guid == guid);
         }
 
-        DroneDto? IDroneRepository.GetDroneById(int id)
+        Drone? IDroneRepository.GetDroneById(int id)
         {
-            Drone? d = _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Id == id);
-            return d is null ? null : new DroneDto()
-            {
-                Guid = d.Guid,
-                Model = d.Model,
-                SerialNumber = d.SerialNumber,
-                WeightLimit = d.WeightLimit,
-                BatteryCapacity = d.BatteryCapacity,
-                Status = d.Status,
-                Medicines = d.Medicines,
-            };
+            return _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Id == id);
         }
 
-        async Task<ICollection<DroneDto>> IDroneRepository.GetDrones()
+        async Task<ICollection<Drone>> IDroneRepository.GetDrones()
         {
-            var drones = await _context.Drones.Include(x => x.Medicines).ToListAsync();
-            return drones.Select(d => new DroneDto()
-            {
-                Guid = d.Guid,
-                Model = d.Model,
-                SerialNumber = d.SerialNumber,
-                WeightLimit = d.WeightLimit,
-                BatteryCapacity = d.BatteryCapacity,
-                Status = d.Status,
-                Medicines = d.Medicines,
-            }).ToList();
+            return await _context.Drones.Include(x => x.Medicines).ToListAsync();
         }
 
         decimal IDroneRepository.GetTotalMedicinesWeight(Drone drone)
