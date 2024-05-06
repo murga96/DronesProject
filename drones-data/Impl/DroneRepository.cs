@@ -17,9 +17,8 @@ namespace drones_data.Impl
         {
             _context = context;
         }
-        bool IDroneRepository.AddMedicines(string guid, ICollection<Medicine> medicines)
+        bool IDroneRepository.AddMedicines(Drone drone, ICollection<Medicine> medicines)
         {
-            var drone = ((IDroneRepository)this).GetDroneByGuid(guid);
             if (drone is null) return false;
             drone.Medicines = medicines;
             drone.Status = DroneStatus.CHARGED;
@@ -36,12 +35,12 @@ namespace drones_data.Impl
 
         ICollection<Drone> IDroneRepository.GetAvailableDrones()
         {
-            return _context.Drones.Where(x => x.BatteryCapacity > 25 && (x.Status == DroneStatus.INACTIVE)).ToList();
+            return _context.Drones.Where(x => x.BatteryCapacity > 25 && (x.Status == DroneStatus.INACTIVE)).Include(x => x.Medicines).ToList();
         }
 
         DroneDto? IDroneRepository.GetDroneByGuid(string guid)
         {
-            Drone? d = _context.Drones.FirstOrDefault(x => x.Guid == guid);
+            Drone? d = _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Guid == guid);
             return d is null ? null : new DroneDto()
             {
                 Guid = d.Guid,
@@ -56,7 +55,7 @@ namespace drones_data.Impl
 
         DroneDto? IDroneRepository.GetDroneById(int id)
         {
-            Drone? d = _context.Drones.FirstOrDefault(x => x.Id == id);
+            Drone? d = _context.Drones.Include(x => x.Medicines).FirstOrDefault(x => x.Id == id);
             return d is null ? null : new DroneDto()
             {
                 Guid = d.Guid,
@@ -71,7 +70,7 @@ namespace drones_data.Impl
 
         async Task<ICollection<DroneDto>> IDroneRepository.GetDrones()
         {
-            var drones = await _context.Drones.ToListAsync();
+            var drones = await _context.Drones.Include(x => x.Medicines).ToListAsync();
             return drones.Select(d => new DroneDto()
             {
                 Guid = d.Guid,
@@ -84,9 +83,8 @@ namespace drones_data.Impl
             }).ToList();
         }
 
-        decimal IDroneRepository.GetTotalMedicinesWeight(string guid)
+        decimal IDroneRepository.GetTotalMedicinesWeight(Drone drone)
         {
-            var drone = ((IDroneRepository)this).GetDroneByGuid(guid);
             if (drone is null) return (decimal)-1.0;
             return drone.Medicines.Sum(d => d.Weight);
         }

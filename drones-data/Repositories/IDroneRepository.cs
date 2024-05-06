@@ -11,11 +11,11 @@ namespace drones_data.Repositories
     public interface IDroneRepository
     {
         Task<Drone?> CreateDrone(Drone drone);
-        bool AddMedicines(string guid, ICollection<Medicine> medicines);
+        bool AddMedicines(Drone drone, ICollection<Medicine> medicines);
         ICollection<Drone> GetAvailableDrones();
         DroneDto? GetDroneByGuid(string guid);
         DroneDto? GetDroneById(int id);
         Task<ICollection<DroneDto>> GetDrones();
-        decimal GetTotalMedicinesWeight(string guid);
+        decimal GetTotalMedicinesWeight(Drone drone);
     }
 }
