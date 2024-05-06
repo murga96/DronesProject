@@ -17,6 +17,7 @@ namespace drones_root
             services.AddDbContext<AppDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("Db")));
             services.AddScoped<AppDbContext>();
             services.AddScoped<IDroneRepository, DroneRepository>();
+            services.AddScoped<IMedicineRepository, MedicineRepository>();
 
             #endregion
 
@@ -28,6 +29,7 @@ namespace drones_root
 
             #region Business
             services.AddScoped<IDroneService, DroneService>();
+            services.AddScoped<IMedicineService, MedicineService>();
 
             #endregion
 

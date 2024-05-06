@@ -58,5 +58,10 @@ namespace drones_data.Impl
             if (drone is null) return (decimal)-1.0;
             return drone.Medicines.Sum(d => d.Weight);
         }
+
+        bool IDroneRepository.isSerialNumberExists(string serialNumber)
+        {
+            return _context.Drones.Any(x => x.SerialNumber == serialNumber);
+        }
     }
 }

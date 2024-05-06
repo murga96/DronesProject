@@ -12,5 +12,6 @@ namespace drones_data.Repositories
         Drone? GetDroneById(int id);
         Task<ICollection<Drone>> GetDrones();
         decimal GetTotalMedicinesWeight(DroneDto drone);
+        bool isSerialNumberExists(string serialNumber);
     }
 }

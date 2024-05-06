@@ -9,11 +9,13 @@ namespace DronesWebApi.ApiServices
     public class DroneApiService : IApiService
     {
         private readonly IDroneService _service;
+        private readonly IMedicineService _medicineService;
         private readonly IValidator<DroneApiDto> _validator;
         private readonly IValidator<ChargeDroneWithMedicinesDto> _validatorMedicines;
-        public DroneApiService(IDroneService service, IValidator<DroneApiDto> validator,
+        public DroneApiService(IDroneService service, IMedicineService medicineService, IValidator<DroneApiDto> validator,
             IValidator<ChargeDroneWithMedicinesDto> validatorMedicines) { 
             _service = service;
+            _medicineService = medicineService;
             _validator = validator;
             _validatorMedicines = validatorMedicines;
         }
@@ -25,6 +27,8 @@ namespace DronesWebApi.ApiServices
             {
                 return TypedResults.ValidationProblem(result.ToDictionary());
             }
+            if(_service.isSerialNumberExists(d.SerialNumber))
+                return TypedResults.BadRequest($"Serial number {d.SerialNumber} already exists.");
             Drone newDrone = new()
             {
                 Model = d.Model,
@@ -54,6 +58,9 @@ namespace DronesWebApi.ApiServices
             if (drone.BatteryCapacity < 25) 
                 return TypedResults.BadRequest("Drone doesn't has enought battery power to charge medicines");
             
+            if(dto.Medicines.Any(x => _medicineService.isCodeExists(x.Code))) {
+                return TypedResults.BadRequest("Medicines to be charged must have unique code");
+            }
             var totalWeightToCharge = dto.Medicines.Sum(x => x.Weight);
             if (totalWeightToCharge > drone.WeightLimit || ( drone.Medicines.Sum(x => x.Weight) + totalWeightToCharge > drone.WeightLimit) )
                 return TypedResults.BadRequest("The load is too heavy, it exceeds the drone weight limit.");

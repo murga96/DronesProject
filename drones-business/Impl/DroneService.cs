@@ -99,5 +99,10 @@ namespace drones_business.Impl
         {
             return _repository.GetTotalMedicinesWeight(drone);
         }
+
+        bool IDroneService.isSerialNumberExists(string serialNumber)
+        {
+            return _repository.isSerialNumberExists(serialNumber);
+        }
     }
 }
